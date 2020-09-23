@@ -1,0 +1,31 @@
+#get list of ads
+GET http://localhost:8080/ads?page=1&sort=-price
+Accept: application/json
+Cache-Control: no-cache
+###
+
+#get  get one ad
+GET http://localhost:8080/ads/1
+Accept: application/json
+Cache-Control: no-cache
+###
+
+
+#get create ad
+POST http://localhost:8080/ads
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "title" : "alala",
+  "description": "zzz",
+  "price": 9223372036854775807,
+  "photos": [
+    "https://www.iams.com/images/default-source/article-image/article_stomach-issues-in-cats-why-cats-vomit-and-what-to-do_header.jpg",
+    "https://cdn.britannica.com/67/197567-131-1645A26E/Scottish-fold-cat-feline.jpg",
+    "https://icatcare.org/app/uploads/2019/03/Caring-for-your-cats-ears.png"
+  ]
+}
+
+###
